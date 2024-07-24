@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-image: url(../css/bgg.jpg);
+    /*background-color: #f4f4f4;*/
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    /*background-color: #fff;*/
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    font-family: "Lucida Handwriting", "Courier New", Cursive;
+    animation: pulse 2s infinite;
+}
+
+#noteForm {
+    margin-bottom: 20px;
+}
+
+#title,
+#content {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: "Lucida Handwriting", "Courier New", Cursive;
+}
+
+#title:focus,
+#content:focus {
+    border-color: black;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #490648;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Lucida Handwriting", "Courier New", Cursive;
+}
+
+#notesList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#notesList li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+#notesList .note-content {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+    font-family: "Lucida Handwriting", "Courier New", Cursive;
+}
+
+#notesList button {
+    background-color: transparent;
+    color: #ff038f;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#notesList .edit-button {
+    color: #572649;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    font-family: "Lucida Handwriting", "Courier New", Cursive;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    font-family: "Lucida Handwriting", "Courier New", Cursive;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
